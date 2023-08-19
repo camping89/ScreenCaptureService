@@ -34,7 +34,6 @@ namespace ScreenCaptureService
         [DllImport("gdi32.dll")]
         private static extern int DeleteObject(IntPtr hObject);
 
-
         private static string _outputPath = string.Empty;
         private static string _fileNameFormat;
         private static int _intervalSeconds;
@@ -53,14 +52,12 @@ namespace ScreenCaptureService
                     await Task.Delay(_intervalSeconds * 1000);
                 }
             });
-
         }
 
         public void Stop()
         {
             cancellationTokenSource.Cancel();
         }
-
 
         public static void CaptureScreenToFile()
         {
@@ -87,6 +84,7 @@ namespace ScreenCaptureService
             DeleteDC(hdc);
             ReleaseDC(IntPtr.Zero, desktopHdc);
         }
+
         private static void LoadConfig()
         {
             string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
