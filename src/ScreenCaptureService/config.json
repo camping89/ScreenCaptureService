@@ -1,5 +1,5 @@
 {
   "OutputPath": "D:\\screenshots\\",
   "FileNameFormat": "Screenshot_{0:yyyyMMddHHmmss}.png",
-  "IntervalSeconds": 3
+  "IntervalSeconds": 30
 }

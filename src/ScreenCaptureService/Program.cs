@@ -1,15 +1,9 @@
-﻿using ScreenCaptureService;
-using System;
-using System.Drawing;
-using System.Runtime.InteropServices;
-using Topshelf;
+﻿using Topshelf;
 
-namespace ScreenshotApp
+namespace ScreenCaptureService
 {
     class Program
     {
-        
-
         static void Main(string[] args)
         {
             HostFactory.Run(x =>
@@ -29,7 +23,5 @@ namespace ScreenshotApp
             });
             Console.WriteLine("Screenshot saved.");
         }
-
-        
     }
 }
